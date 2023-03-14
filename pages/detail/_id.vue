@@ -27,6 +27,10 @@ export default {
       product,
     }
   },
+  mounted() {
+    console.log(`id: ${this.$route.params.id}`)
+    console.log('product: ', this.product)
+  },
   methods: {
     async addToCart() {
       const res = await createCartItem(this.product)
