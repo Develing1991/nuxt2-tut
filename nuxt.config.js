@@ -1,4 +1,6 @@
 export default {
+  target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt2',
@@ -46,7 +48,8 @@ export default {
   env: {
     BASE_URL:
       process.env.NODE_ENV === 'production'
-        ? 'deployurl~~'
+        ? // ? 'https://my-json-server.typicode.com/joshua1988/nuxt-shopping-api'
+          'deployurl~~'
         : 'http://localhost:4000',
   },
 }
