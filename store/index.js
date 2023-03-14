@@ -43,18 +43,18 @@ export const actions = {
 
   // asyncData보다 이른 시점에 이미 데이터가 전부 준비된 스토어를 반환하게함
   // 해당 cart.vue에서 불러오는 시점보다 먼저 동작하기 때문에 cart.vue에서 FETCH_CART_ITEMS를 호출하지 않아도 이미 데이터가 있음
-  async nuxtServerInit(storeContext, nuxtContext) {
-    // SSR할 데이터가 여러개 일 수도 있기 때문에
-    // action들을 정의해 놓으면 간편
-    await storeContext.dispatch(FETCH_CART_ITEMS)
+  // async nuxtServerInit(storeContext, nuxtContext) {
+  //   // SSR할 데이터가 여러개 일 수도 있기 때문에
+  //   // action들을 정의해 놓으면 간편
+  //   await storeContext.dispatch(FETCH_CART_ITEMS)
 
-    //   const { data } = await fetchCartItems()
-    //   storeContext.commit(
-    //     'SET_CART_ITEMS',
-    //     data.map((item) => ({
-    //       ...item,
-    //       imageUrl: `${item.imageUrl}?random=${Math.random()}`,
-    //     }))
-    //   )
-  },
+  //   //   const { data } = await fetchCartItems()
+  //   //   storeContext.commit(
+  //   //     'SET_CART_ITEMS',
+  //   //     data.map((item) => ({
+  //   //       ...item,
+  //   //       imageUrl: `${item.imageUrl}?random=${Math.random()}`,
+  //   //     }))
+  //   //   )
+  // },
 }
