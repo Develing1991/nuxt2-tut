@@ -27,21 +27,17 @@ export default {
       product,
     }
   },
-  head: {
-    title: '상세 페이지 타이틀',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: '상품 상세 페이지 설명입니다.',
-      },
-    ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap',
-      },
-    ],
+  head() {
+    return {
+      title: `상세 페이지 타이틀 - ${this.product.name}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.product.name} 상품 상세 페이지 설명입니다.`,
+        },
+      ],
+    }
   },
   mounted() {
     console.log(`id: ${this.$route.params.id}`)
