@@ -52,8 +52,7 @@ export default {
   env: {
     BASE_URL:
       process.env.NODE_ENV === 'production'
-        ? 'https://my-json-server.typicode.com/joshua1988/nuxt-shopping-api'
-        : // 'deployurl~~'
-          'http://localhost:4000',
+        ? 'deployurl~~'
+        : 'http://localhost:4000',
   },
 }
