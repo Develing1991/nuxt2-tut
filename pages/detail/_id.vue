@@ -36,9 +36,34 @@ export default {
           name: 'description',
           content: `${this.product.name} 상품 상세 페이지 설명입니다.`,
         },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: '상품 상세 페이지',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: '상품의 상세 정보를 확인해보세요',
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'http://placeimg.com/640/480/fashion',
+        },
       ],
     }
   },
+  // head: {
+  //   title: '페이지 타이틀',
+  //   meta: [
+  //     {
+  //       hid: 'description',
+  //       name: 'description',
+  //       content: '페이지 설명 내용',
+  //     },
+  //   ],
+  // },
   mounted() {
     console.log(`id: ${this.$route.params.id}`)
     console.log('product: ', this.product)
