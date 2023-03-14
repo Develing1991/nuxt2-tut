@@ -37,7 +37,16 @@ export default {
     transpile: ['axios', 'uuid'],
   },
 
+  // server
   server: {
     port: process.env.NODE_ENV === 'production' ? null : 5001,
+  },
+
+  // env config
+  env: {
+    BASE_URL:
+      process.env.NODE_ENV === 'production'
+        ? 'deployurl~~'
+        : 'http://localhost:4000',
   },
 }

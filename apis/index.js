@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { v4 as uuid } from 'uuid'
 const instance = axios.create({
-  baseURL: 'http://localhost:4000',
+  baseURL: process.env.BASE_URL,
 })
 
 /********************************
