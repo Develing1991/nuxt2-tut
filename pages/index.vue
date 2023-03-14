@@ -31,8 +31,7 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
-import { fetchProductByKeyword } from '@/apis'
+import { fetchProducts, fetchProductByKeyword } from '@/apis'
 export default {
   // asyncData({isDev, route, store, env, params, query, req, res, redirect, error}) {
   // },
@@ -41,7 +40,7 @@ export default {
   // 그래서 v-if같이 데이터 가드 사용 안해도 되넹..
   // beforeEnter..와 비슷 함
   async asyncData() {
-    const res = await axios.get('http://localhost:4000/products')
+    const res = await fetchProducts()
     const products = res.data.map((product) => {
       return {
         ...product,
